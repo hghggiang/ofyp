@@ -14,7 +14,7 @@ plt.rcParams.update({'font.size': 7})
 start_time = time.time()
 
 # Check for empty lines
-file_handler = open("obstacles_18a","r");
+file_handler = open("obstacles_10","r");
 raw_data = file_handler.read();
 raw_data = raw_data.split("\n");
 step_size = 150;
