@@ -1,6 +1,6 @@
 import csv
 
-txtfile = open('obstacles_16', 'w+')
+txtfile = open('obstacles_15', 'w+')
 csvfile = open('buildings(1).csv', 'r')
 readcsv = csv.reader(csvfile, delimiter=',')
 
@@ -18,8 +18,8 @@ readcsv = csv.reader(csvfile, delimiter=',')
 # altitude = 33.05
 # altitude = 38.14
 # altitude = 43.78
-# altitude = 51.78
-altitude = 65.71 # 16th
+altitude = 51.78 # 15th
+# altitude = 65.71 # 16th
 # altitude = 82.59 # 17th
 # altitude = 100.92 # 18th
 # altitude = 132.51 # 19th
