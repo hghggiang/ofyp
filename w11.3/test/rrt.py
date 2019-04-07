@@ -208,11 +208,10 @@ plt.plot(graph_vertices[-1].x, graph_vertices[-1].y, marker="o")
 plt.title('Step size = {0} m     Goal bias = {1}' .format(step_size, bias_prob))
 # plt.xlim(boundary[0].x,boundary[1].x)
 # plt.ylim(boundary[0].y,boundary[2].y)
-# plt.savefig('./figures/{0}.png' .format(start_time))
+plt.savefig('./figures/{0}.png' .format(start_time))
 plt.show()
 
 # Output into a file -----------------------------------------------
-'''
 import csv
 
 results = [
@@ -249,4 +248,3 @@ with open('results.csv','a') as f:
 	writer = csv.writer(f)
 	# writer.writerow(headings) # uncomment on first run
 	writer.writerow(results)
-'''
