@@ -1,0 +1,5 @@
+Steps to run RRT at an altitude of choice:
+1. Set variable altitude to desired value in rrt.py
+2. Set input file name to desired altitude
+3. Parameters to check: step_size, goal_bias, source, dest
+4. Run code rrt.py
