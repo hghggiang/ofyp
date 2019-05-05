@@ -1,0 +1,27 @@
+id,path length,runtime,step size,goal bias,altitude,origin,destination,search space
+1556579572.017645,1747.6627081384672,1.9853382110595703,10,0.2,100.92,"x = 552086, y = 4182792, obs = -1 and test:-1","x = 553126, y = 4182157, obs = -1 and test:-1","[<helpers.geometry.point instance at 0x103ecacf8>, <helpers.geometry.point instance at 0x103ecaf38>, <helpers.geometry.point instance at 0x103ecaea8>, <helpers.geometry.point instance at 0x103ecae18>]"
+1556579627.087767,1828.6301103329988,2.207390069961548,10,0.2,100.92,"x = 552086, y = 4182792, obs = -1 and test:-1","x = 553126, y = 4182157, obs = -1 and test:-1","[<helpers.geometry.point instance at 0x10817fcf8>, <helpers.geometry.point instance at 0x10817ff38>, <helpers.geometry.point instance at 0x10817fea8>, <helpers.geometry.point instance at 0x10817fe18>]"
+1556579705.871115,2117.6224775430546,3.0548441410064697,10,0.2,100.92,"x = 552086, y = 4182792, obs = -1 and test:-1","x = 553126, y = 4182157, obs = -1 and test:-1","[<helpers.geometry.point instance at 0x10a90bcf8>, <helpers.geometry.point instance at 0x10a90bf38>, <helpers.geometry.point instance at 0x10a90bea8>, <helpers.geometry.point instance at 0x10a90be18>]"
+1556579737.682596,1771.4739273858256,3.659605026245117,10,0.2,100.92,"x = 552086, y = 4182792, obs = -1 and test:-1","x = 553126, y = 4182157, obs = -1 and test:-1","[<helpers.geometry.point instance at 0x10946ccf8>, <helpers.geometry.point instance at 0x10946cf38>, <helpers.geometry.point instance at 0x10946cea8>, <helpers.geometry.point instance at 0x10946ce18>]"
+1556580044.950266,2088.05942989671,3.0326011180877686,10,0.2,100.92,"x = 552086, y = 4182792, obs = -1 and test:-1","x = 553126, y = 4182157, obs = -1 and test:-1",20 percent expansion
+1556580156.810274,1467.9896829807471,0.96946120262146,50,0.2,100.92,"x = 552086, y = 4182792, obs = -1 and test:-1","x = 553126, y = 4182157, obs = -1 and test:-1",20 percent expansion
+1556580187.696179,1615.1314735288342,0.971992015838623,50,0.2,100.92,"x = 552086, y = 4182792, obs = -1 and test:-1","x = 553126, y = 4182157, obs = -1 and test:-1",20 percent expansion
+1556580209.98454,1652.403756651809,0.7729489803314209,50,0.2,100.92,"x = 552198, y = 4182276, obs = -1 and test:-1","x = 553252, y = 4183300, obs = -1 and test:-1",20 percent expansion
+1556580231.753983,1715.2569822943074,0.3148500919342041,50,0.2,100.92,"x = 553546, y = 4183389, obs = -1 and test:-1","x = 553076, y = 4181847, obs = -1 and test:-1",20 percent expansion
+1556580242.116436,2144.4226089310137,1.3130440711975098,50,0.2,100.92,"x = 553197, y = 4181960, obs = -1 and test:-1","x = 553140, y = 4183746, obs = -1 and test:-1",20 percent expansion
+1556580253.099011,1655.6534612347357,0.6917281150817871,50,0.2,100.92,"x = 552800, y = 4183680, obs = -1 and test:-1","x = 552200, y = 4182500, obs = -1 and test:-1",20 percent expansion
+1556580270.392281,1763.5487731829096,0.15319395065307617,50,0.2,100.92,"x = 553690, y = 4182968, obs = -1 and test:-1","x = 552182, y = 4182354, obs = -1 and test:-1",20 percent expansion
+1556580296.383252,2069.8676898519893,0.6428911685943604,50,0.2,26.82,"x = 552086, y = 4182792, obs = -1 and test:-1","x = 553126, y = 4182157, obs = -1 and test:-1",20 percent expansion
+1556580307.413011,1909.4024209078766,11.618948936462402,50,0.2,26.82,"x = 552086, y = 4182792, obs = -1 and test:-1","x = 553126, y = 4182157, obs = -1 and test:-1",20 percent expansion
+1556580467.846997,2073.9526656541907,12.405271053314209,50,0.2,26.82,"x = 552086, y = 4182792, obs = -1 and test:-1","x = 553126, y = 4182157, obs = -1 and test:-1",20 percent expansion
+1556580531.246347,2437.1223406713866,23.015810012817383,50,0.2,15.7,"x = 552086, y = 4182792, obs = -1 and test:-1","x = 553126, y = 4182157, obs = -1 and test:-1",20 percent expansion
+1556580591.638796,2235.5850152202156,46.04621982574463,50,0.2,8.79,"x = 552086, y = 4182792, obs = -1 and test:-1","x = 553126, y = 4182157, obs = -1 and test:-1",20 percent expansion
+1556580718.681823,1992.3176619088981,21.3713219165802,50,0.2,8.79,"x = 553546, y = 4183389, obs = -1 and test:-1","x = 553076, y = 4181847, obs = -1 and test:-1",20 percent expansion
+1556580800.007886,3704.769246656821,45.01831102371216,50,0.2,8.79,"x = 553197, y = 4181960, obs = -1 and test:-1","x = 553140, y = 4183746, obs = -1 and test:-1",20 percent expansion
+1556581552.437119,2357.858783682289,45.94590210914612,50,0.2,8.79,"x = 552182, y = 4182354, obs = -1 and test:-1","x = 553533, y = 4182497, obs = -1 and test:-1",20 percent expansion
+1556581631.529045,2990.8494214103894,29.5331768989563,50,0.2,8.79,"x = 552198, y = 4182276, obs = -1 and test:-1","x = 553252, y = 4183300, obs = -1 and test:-1",20 percent expansion
+1556582198.795795,1985.9589633262506,18.6183660030365,50,0.2,8.79,"x = 552086, y = 4182792, obs = -1 and test:-1","x = 553126, y = 4182157, obs = -1 and test:-1",20 percent expansion
+1556582233.597503,2842.2740302987568,68.14320397377014,50,0.2,8.79,"x = 553197, y = 4181960, obs = -1 and test:-1","x = 553140, y = 4183746, obs = -1 and test:-1",20 percent expansion
+1556582335.618611,3239.0708182202234,34.61656379699707,50,0.2,8.79,"x = 553690, y = 4182968, obs = -1 and test:-1","x = 552182, y = 4182354, obs = -1 and test:-1",20 percent expansion
+id,path length,runtime,step size,goal bias,altitude,origin,destination,search space
+1556582490.1561,1653.0262744635045,1.527297019958496,50,0,65.71,"x = 552182, y = 4182354, obs = -1 and test:-1","x = 553533, y = 4182497, obs = -1 and test:-1",20 percent expansion

@@ -12,20 +12,20 @@ plt.rcParams.update({'font.size': 7})
 
 
 # input parameters
-step_size = 10;
-bias_prob = 0.2; # probability that the goal is chosen as node
+step_size = 20;
+bias_prob = 0.1; # probability that the goal is chosen as node
 
 # Uncomment current altitude
 # altitude = 8.79 # 1st
 # altitude = 11.76 # 2nd
 # altitude = 13.1 # 3rd
-altitude = 13.95 # 4th
+# altitude = 13.95 # 4th
 # altitude = 15.7 # 5th
 # altitude = 17.55 # 6th
 # altitude = 19.28 # 7th
 # altitude = 21.61 # 8th
 # altitude = 23.94 # 9th
-# altitude = 26.82 # 10th
+altitude = 26.82 # 10th
 # altitude = 30.08 # 11th
 # altitude = 33.05 # 12th
 # altitude = 38.14 # 13th
@@ -102,7 +102,7 @@ boundary = [point(i[0], i[1]) for i in temp];
 # To manually change boundary, uncomment desired pair
 # boundary = [point(552204,4181833),point(553685,4181833),point(553685,4183823),point(552204,4183823)] # no expansion
 # boundary = [point(552058,4181636),point(553832,4181636),point(553832,4184021),point(552058,4184021)] # 10% expansion in each direction
-boundary = [point(551911,4181438),point(553685,4181438),point(553685,4184219),point(551911,4184219)] # 20% expansion in each direction
+boundary = [point(551911,4181438),point(553979,4181438),point(553979,4184219),point(551911,4184219)] # 20% expansion in each direction
 
 # Extract source and dest
 temp = parse_input_line(raw_data[len(raw_data)-1]);
@@ -111,11 +111,12 @@ dest = point(temp[1][0], temp[1][1]);
 
 # To manually change source and destination, uncomment desired OD pair
 # source = point(552288,    4182078); dest = point(553004,  4183309); # pair 1
-# source = point(552182,	4182354); dest = point(553533,	4182497); # pair 2
+source = point(552182,	4182354); dest = point(553533,	4182497); # pair 2
 # source = point(552528,	4181963); dest = point(552751,	4183657); # pair 3
 # source = point(552198,	4182276); dest = point(553252,	4183300); # pair 4: almost direct straight line
-# source = point(552226,	4183360); dest = point(553782,	4182919); # pair 5: difficult pair, tends to terminate by reaching iteration limit
-source = point(552086,	4182792); dest = point(553126,	4182157); # pair 6
+# source = point(552226,	4183360); dest = point(553782,	4182930); # pair 5: difficult pair, tends to terminate by reaching iteration limit
+# source = point(552226,	4183360); dest = point(553782,	4183500); # pair 5new: difficult pair, tends to terminate by reaching iteration limit
+# source = point(552086,	4182792); dest = point(553126,	4182157); # pair 6
 # source = point(553546,	4183389); dest = point(553076,	4181847); # pair 7
 # source = point(553197,	4181960); dest = point(553140,	4183746); # pair 8
 # source = point(552800,	4183680); dest = point(552200,	4182500); # pair 9
@@ -152,16 +153,16 @@ while(found is False):
 	
 	if( len(graph_vertices)>=1500 ): # Originally 1500, but runtime gets too long at 1st altitude
 		print "Iteration limit Reached";
-		break;
+	 	break;
 
 	graph.append([]);
 
-	if check_obstruction(obstacles, [source, dest]) is True:
-		found = True; print("Reached..!!");
-		graph_vertices.append(dest);
-		n = len(graph_vertices)-1;
-		graph[n-1].append(n);
-		break;		
+	# if check_obstruction(obstacles, [source, dest]) is True:
+	#	found = True; print("Reached..!!");
+	#	graph_vertices.append(dest);
+	#	n = len(graph_vertices)-1;
+	#	graph[n-1].append(n);
+	#	break;		
 	
 	potential_next_vertex = choose_target();
 	# if(potential_next_vertex.inside_polygon(obstacles) is True ):
@@ -213,17 +214,6 @@ while(found is False):
 runtime = time.time() - start_time
 print('--- %s seconds ---' %runtime)
 
-poly_x =[]
-poly_y =[]
-for index, i in enumerate(obstacles):
-	poly_x.append([p.x for p in i]);
-	poly_y.append([p.y for p in i]);
-
-	plt.fill( poly_x[index], poly_y[index], color="#512DA8");	
-
-for index,i in enumerate(graph):
-	for j in i:
-		plt.plot([graph_vertices[index].x, graph_vertices[j].x], [graph_vertices[index].y, graph_vertices[j].y]);
 
 # Find the path by running BFS on the graph
 path = bfs(graph, 0, len(graph_vertices)-1);
@@ -233,7 +223,7 @@ y_array = [graph_vertices[i].y for i in path];
 array = np.array(list(zip(x_array,y_array))).tolist()
 
 # Path smoothing --------------------------------------------------
-maxIter = 2000 # Original value = 1000
+maxIter = 1000 # Original value = 1000
 smoothedPath = PathSmoothing(array, maxIter, obstacles)
 
 runtime_smooth = time.time() - start_time
@@ -246,6 +236,18 @@ print('Smoothed path length = %s' %smoothedPath_length)
 print('id: %s' %start_time)
 
 # Plot results -----------------------------------------------------
+poly_x =[]
+poly_y =[]
+for index, i in enumerate(obstacles):
+	poly_x.append([p.x for p in i]);
+	poly_y.append([p.y for p in i]);
+
+	plt.fill( poly_x[index], poly_y[index], color="#512DA8");	
+
+for index,i in enumerate(graph):
+	for j in i:
+		plt.plot([graph_vertices[index].x, graph_vertices[j].x], [graph_vertices[index].y, graph_vertices[j].y], linewidth=1);
+
 plt.plot(x_array, y_array, color="#000000", linewidth=2);
 plt.plot([x for (x, y) in smoothedPath], [
             y for (x, y) in smoothedPath], '-b', linewidth=2);

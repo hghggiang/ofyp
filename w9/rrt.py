@@ -16,7 +16,7 @@ start_time = time.time()
 file_handler = open("obstacles_1a","r");
 raw_data = file_handler.read();
 raw_data = raw_data.split("\n");
-step_size = 150;
+step_size = 50;
 bias_prob = 0.2;
 altitude = 100.92
 

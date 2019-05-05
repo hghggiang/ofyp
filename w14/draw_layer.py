@@ -109,13 +109,13 @@ dest = point(temp[1][0], temp[1][1]);
 # source = point(552288,    4182078); dest = point(553004,  4183309); # pair 1
 # source = point(552182,	4182354); dest = point(553533,	4182497); # pair 2
 # source = point(552528,	4181963); dest = point(552751,	4183657); # pair 3
-# source = point(552198,	4182276); dest = point(553252,	4183300); # pair 4: almost direct straight line
+source = point(552198,	4182276); dest = point(553252,	4183300); # pair 4: almost direct straight line
 # source = point(552226,	4183360); dest = point(553782,	4182919); # pair 5: difficult pair, tends to terminate by reaching iteration limit
 # source = point(552086,	4182792); dest = point(553126,	4182157); # pair 6
 # source = point(553546,	4183389); dest = point(553076,	4181847); # pair 7
 # source = point(553197,	4181960); dest = point(553140,	4183746); # pair 8
 # source = point(552800,	4183680); dest = point(552200,	4182500); # pair 9: dest.x out of boundary
-source = point(553690,	4182968); dest = point(552182,	4182354); # pair 10
+# source = point(553690,	4182968); dest = point(552182,	4182354); # pair 10
 
 # Extract obstacles
 temp_obstacles = [];
