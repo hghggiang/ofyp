@@ -42,12 +42,12 @@ bias_prob = 0.1; # probability that the goal is chosen as node
 # altitude = 100.92 # 18th
 # altitude = 132.51 # 19th
 # altitude = 258.49 # 20th
-altitude = 100.0
+altitude = 100.0 # test
 
 start_time = time.time()
 
 # Check for empty lines
-file_handler = open("input/obstacles_18","r"); # remember to change altitude accordingly, so that results.csv is accurate
+file_handler = open("input/obstacles_test","r"); # remember to change altitude accordingly, so that results.csv is accurate
 raw_data = file_handler.read();
 raw_data = raw_data.split("\n");
 if(len(raw_data) <2):
@@ -253,21 +253,23 @@ for index, i in enumerate(obstacles):
 	poly_y.append([p.y for p in i]);
 
 	plt.fill( poly_x[index], poly_y[index], color="#512DA8");	
-
+'''
 for index,i in enumerate(graph):
 	for j in i:
 		plt.plot([graph_vertices[index].x, graph_vertices[j].x], [graph_vertices[index].y, graph_vertices[j].y], linewidth=1);
+'''
 
-plt.plot(x_array, y_array, color="#000000", linewidth=2);
+# plt.plot(x_array, y_array, color="#000000", linewidth=2); # rrt path
 plt.plot([x for (x, y) in smoothedPath], [
-            y for (x, y) in smoothedPath], '-b', linewidth=2);
+            y for (x, y) in smoothedPath], '-b', linewidth=2); # smoothed path
 plt.plot(graph_vertices[0].x, graph_vertices[0].y, marker="o")
 plt.plot(graph_vertices[-1].x, graph_vertices[-1].y, marker="o")
 plt.plot(dest.x, dest.y, marker="o")
 # plt.title('Altitude = {2} m     Step size = {0} m     Goal bias = {1}' .format(step_size, bias_prob, altitude))
-plt.title('The shortest path is {0} at altitude: {1} meters' .format(smoothedPath_length, altitude))
+plt.title('The shortest path is {0:0.2f} at altitude: {1} meters' .format(smoothedPath_length, altitude))
 plt.xlim(boundary[0].x,boundary[1].x)
 plt.ylim(boundary[0].y,boundary[2].y)
+plt.axis('equal')
 plt.xlabel('x/m')
 plt.ylabel('y/m')
 plt.savefig('./figures/{0}.png' .format(start_time))
